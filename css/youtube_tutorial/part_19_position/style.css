@@ -1,0 +1,43 @@
+.green-box{
+    width: 600px;
+    height: 350px;
+    background: green;
+    position: relative;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* margin: auto; */
+}
+.red{
+    width: 180px;
+    height: 180px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+.n{
+    padding: 6px;
+    margin-top: 10px;
+    background: rgb(252, 3, 3);
+    position: sticky;
+    top: 0;
+}
+.bc{
+    padding-bottom: 1000px;
+}
+.ab{
+    width: 21%;
+    padding: 5px;
+    margin: 2px;
+    background: rgb(95, 219, 95);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

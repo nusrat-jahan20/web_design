@@ -1,0 +1,40 @@
+ul{
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+}
+ul li{
+    float: left;
+    /* display: inline-block; */
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 20px 30px;
+    display: inline-block;
+}
+ul li a:hover{
+    background: rgb(21, 43, 241);
+    color: rgb(0, 0, 0);
+}
+.dropdown-content{
+    display: none;
+    box-shadow:0 10px 20px 0 rgb(168, 169, 243);
+    position: absolute;
+}
+.dropdown-content a{
+    display: block ;
+    background: white;
+    color: black;
+}
+.dropdown-content a:hover{
+    background: rgb(243, 242, 242);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}

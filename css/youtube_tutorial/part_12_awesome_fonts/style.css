@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+}
+
+.fa-ambulance{
+    font-size: 60px;
+    color: rgb(80, 19, 39);
+}
+
+.fa-android{
+    font-size: 70px;
+   color: rgb(124, 129, 128);
+}
+
+.fa-facebook-square{
+    font-size: 70px;
+    color: rgb(16, 16, 116);
+}
+
+.abc{
+    width: 35px;
+    height: 37px;
+    background-color: black
+}
+
+.fa-apple{
+    font-size: 40px;
+    color: white;
+    padding: 14px 20px;
+}
+
+.fa-angry{
+    font-size: 60px;
+    color: rgb(216, 34, 34);
+}

@@ -1,0 +1,60 @@
+.icons{
+    overflow: hidden;
+}
+.icons ul{
+    margin: 0;
+    padding: 0;
+}
+.icons ul li{
+    list-style-type: none;
+    float: left;
+    margin-right:50px ;
+}
+.icons ul li:last-child {
+    margin-right: 0px;
+}
+.icons ul li a{
+    background-image: url('../image/icons.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 84px;
+    height: 84px;
+    border: 2px solid rgb(114, 113, 113);
+    border-radius: 50%;
+    display: inline-block;
+    transition: 1s ;
+    /* transform: 1s; */
+}
+.icons ul li:hover:nth-child(1) a{
+    /* transform: rotate(360deg); */
+    background-position: 0 -84px;
+}
+.icons ul li:nth-child(2) a{
+    background-position: -588px 0;
+}
+.icons ul li:hover:nth-child(2) a{
+    /* transform: rotate(360deg); */
+    background-position: -588px -84px;
+}
+.icons ul li:nth-child(3) a{
+    background-position: -840px 0;
+}
+.icons ul li:hover:nth-child(3) a{
+    /* transform: rotate(360deg); */
+    background-position: -840px -84px;
+}
+.icons ul li:nth-child(4) a{
+    background-position: -673px 0;
+}
+.icons ul li:hover:nth-child(4) a{
+    /* transform: rotate(360deg); */
+    background-position: -673px -84px;
+}
+.icons ul li:nth-child(5) a{
+    background-position: -756px 0;
+}
+.icons ul li:hover:nth-child(5) a{
+    /* transform: rotate(360deg); */
+    background-position: -756px -84px;
+}
+

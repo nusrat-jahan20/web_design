@@ -1,0 +1,16 @@
+/* div p{
+    background: greenyellow;
+    padding: 5px;
+} */
+div > p{
+    background: greenyellow;
+    padding: 5px;
+}
+/* div + p{
+    background: greenyellow;
+    padding: 5px;
+} */
+/* div ~ p{
+    background: greenyellow;
+    padding: 5px;
+} */

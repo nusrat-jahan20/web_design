@@ -1,0 +1,6 @@
+h2:nth-child(3){
+    color:rgb(255, 0, 0);
+}
+h2:first-child{
+    color: rgba(0, 255, 21, 0.945);
+}

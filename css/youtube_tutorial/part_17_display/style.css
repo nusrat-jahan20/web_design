@@ -1,0 +1,14 @@
+h2{
+    text-align: center;
+    /* display: none; */
+}
+h3{
+    display: inline-block;
+}
+.bc{
+    text-align: center;
+    display: block;
+}
+ul li{
+    display: inline-block;
+}

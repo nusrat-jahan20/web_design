@@ -1,0 +1,9 @@
+ul{
+    margin: 15px 25px;
+    text-align: justify;
+    font: 18px URW Chancery L, cursive;
+    list-style-type: square;
+    /* list-style-image:  url(../image/star.jpg); */
+    list-style-position: inside;
+    padding: 0;
+}

@@ -1,0 +1,25 @@
+.abc{
+    text-align: justify;
+    border-width: 6px;
+    border-style: groove;
+    border-color: rgb(210, 126, 30);
+    border-radius: 30px 0 ;
+    padding: 20px;
+}
+
+.bcd{
+    border: 6px solid chartreuse;
+    border-radius: 0 30px;
+    padding: 20px;
+
+}
+
+.cde{
+    text-align: justify;
+    border-width: 6px 3px 6px 6px;
+    border-style: dashed dotted groove double;
+    border-color: rgb(121, 2, 218);
+    border-radius: 30px 0 ;
+    padding: 20px;
+
+}

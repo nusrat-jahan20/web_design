@@ -1,0 +1,16 @@
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(255, 251, 0);
+    background-color: rgb(245, 41, 41);
+    padding: 3px 6px;
+}
+a:hover{
+    color: rgb(245, 41, 41);
+    background-color: yellow;
+}
+a:active{
+    color: black;
+    background-color: green;
+}

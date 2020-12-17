@@ -1,0 +1,37 @@
+img{
+    width:16.6%;
+    height: 180px;
+}
+.ab{
+    float: left;
+}
+.bc{
+    float: right;
+}
+p{
+    float: right;
+}
+.box{
+    height: 200px;
+    width: 16.6%;
+    background: black;
+    float: left;
+}
+.box1{
+    background: rgb(255, 230, 0);
+}
+.box2{
+    background: rgb(60, 255, 0);
+}
+.box3{
+    background: rgb(0, 217, 255);
+}
+.box4{
+    background: rgb(17, 0, 255);
+}
+.box5{
+    background: rgb(255, 136, 0);
+}
+.box6{
+    background: rgb(255, 0, 0);
+}

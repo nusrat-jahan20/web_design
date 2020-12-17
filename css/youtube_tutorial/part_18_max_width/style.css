@@ -1,0 +1,10 @@
+.ab{
+    border: 3px solid black;
+    width: 400px;
+    margin: auto;
+}
+.bc{
+    border: 3px solid green;
+    max-width: 400px;
+    margin: auto;
+}

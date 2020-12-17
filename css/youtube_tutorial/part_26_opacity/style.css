@@ -1,0 +1,20 @@
+img{
+    width: 300px;
+}
+img:hover{
+    opacity: 0.6;
+}
+.abc{
+    width: 400px;
+    height: 500px;
+    background: url(../image/macro.jpg) no-repeat center / cover;
+    overflow: hidden;
+}
+.cde p{
+    text-align: center;
+    background: white;
+    color: rgb(4, 53, 4);
+    padding: 30px;
+    opacity: 0.3;
+    margin-top: 230px;
+}

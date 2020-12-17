@@ -1,0 +1,8 @@
+p::first-letter{
+    color: rgb(8, 73, 214);
+    font-size: 40px;
+}
+h2::before{
+    content: url(../image/star.jpg) 'Hey, ';
+    
+}

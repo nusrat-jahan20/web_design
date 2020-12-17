@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(248, 145, 97, 0.486);   
+}
+div{
+    width: 400px;
+    height: 350px;
+    background-image: url(../../image/unique.jpg);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top left;
+}

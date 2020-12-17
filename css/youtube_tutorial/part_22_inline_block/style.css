@@ -1,0 +1,54 @@
+.abc{
+    height: 1100px;
+}
+span.a{
+    width: 100px;
+    height: 100px;
+    background: rgb(247, 110, 235);
+    border: 3px solid  rgb(194, 63, 85);
+    padding: 4px;
+    margin: 2px;
+    display: inline;
+}
+span.b{
+    width: 100px;
+    height: 100px;
+    background: rgb(247, 110, 235);
+    border: 3px solid  rgb(194, 63, 85);
+    padding: 4px;
+    margin: 2px;
+    display: inline-block;
+
+}
+span.c{
+    width: 100px;
+    height: 100px;
+    background: rgb(247, 110, 235);
+    border: 3px solid  rgb(194, 63, 85);
+    padding: 4px;
+    margin: 2px;
+    display: block;
+}
+ul{
+    border: 2px solid red;
+    top: 0;
+    position: sticky;
+    margin: 0;
+    text-align: center;
+    background:rgb(248, 248, 6);
+
+}
+ul li{
+    display: inline-block;
+    padding: 15px 20px;
+}
+ul li a{
+    font-family: 'DejaVu Sans Mono', monospace;
+    text-decoration: none;
+    padding: 17px 20px;
+    color: red;
+}
+ul li :hover{
+    background: red;
+    color:yellow;
+}
