@@ -1,0 +1,32 @@
+h2{
+    font-size: 100px;
+    font-family: 'Langar', cursive;
+    text-align: center;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+    /* text-shadow: -5px 0 red, 0 5px green,0 -5px yellow,5px 0 blue ; */
+}
+h2:hover{
+    text-shadow: -5px 0 red, 0 5px green,0 -5px yellow,5px 0 blue ;
+}
+.abc{
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    border: 1px solid rgb(218, 218, 218);
+    /* box-shadow: 5px 0 8px rgb(117, 114, 114),0 5px 8px rgb(117, 114, 114); */
+}
+img{
+    width: 100%;
+}
+.ab{
+    padding: 20px;
+}
+h3{
+    font-size: 25px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.abc:hover{
+    box-shadow: 3px 0 8px rgb(117, 114, 114),0 3px 8px rgb(117, 114, 114);
+}
