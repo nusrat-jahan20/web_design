@@ -1,0 +1,51 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background: green;
+    animation-name: pammi;
+    animation-duration: 2s;
+}
+@keyframes pammi{
+    from{background-color:green;}
+    to{background-color:yellow;}
+}
+.box1{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: nusrat;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: 2;
+    /* animation-direction: reverse; */
+    animation-direction: alternate-reverse;
+}
+@keyframes nusrat{
+    0%{
+        background-color: red;
+        top: 0;
+        left: 0;
+    }
+    25%{
+        background-color:orangered;
+        top: 0;
+        left: 100px;
+    }
+    50%{
+        background-color: orange;
+        top: 100px;
+        left: 100px;
+    }
+    75%{
+        background-color: yellow;
+        top: 100px;
+        left: 0;
+    }
+    100%{
+        background-color: red;
+        top: 0;
+        left: 0;
+    }
+}
