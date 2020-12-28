@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    background: #3E5C9A;
+    padding: 10px;
+    /* overflow: hidden; */
+}
+.header::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.container {
+    width: 65%;
+    margin: auto;
+}
+.logo-area {
+    width: 30%;
+    float: left;
+}
+.logo-area img {
+    width: 160px;
+    margin-top: 20px;
+}
+.login-area {
+    width: 70%;
+    float: left;
+    color: white;
+}
+.login-area form {
+    float: right;
+}
+.login-area label,
+.login-area input {
+    display: block;
+}
+.login-area label {
+    font-size: 12px;
+    margin-bottom: 5px;
+
+}
+.login-area .email,
+.login-area .password,
+.login-area .login {
+    float: left;
+    margin-right: 15px;
+}
+.login-area .login {
+    margin-right: 0;
+}
