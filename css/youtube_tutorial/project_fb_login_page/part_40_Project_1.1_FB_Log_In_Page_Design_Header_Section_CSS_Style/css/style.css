@@ -38,7 +38,7 @@ body {
     display: block;
 }
 .login-area label {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 5px;
 
 }
@@ -50,4 +50,26 @@ body {
 }
 .login-area .login {
     margin-right: 0;
+}
+.login-area input[type="text"],
+.login-area input[type="password"] {
+    border: 1px solid black;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 3px 5px;
+}
+.login-area .password a {
+    text-decoration: none;
+    color: #9cb4d8;
+    font-size: 12px;
+}
+.login-area .password a:hover {
+    text-decoration: underline;
+}
+.login-area input[type="submit"] {
+    background-color: #4267b2;
+    border: 1px solid #29487d;
+    color: white;
+    padding: 3px 8px;
+    margin-top: 23px;
 }
