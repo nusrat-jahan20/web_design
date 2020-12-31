@@ -1,6 +1,7 @@
 body {
-    width: 90%;
+    width: 98%;
     margin: auto;
+    margin-top: 20px;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
@@ -19,14 +20,14 @@ body {
 .container {
     width: 65%;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1250px;
 }
 .logo-area {
     width: 30%;
     float: left;
 }
 .logo-area img {
-    width: 160px;
+    width: 185px;
     margin-top: 30px;
 }
 .login-area {
@@ -74,9 +75,10 @@ body {
     background-color: #4267b2;
     border: 1px solid #29487d;
     color: white;
-    padding: 3px 8px;
+    padding: 4px 9px;
     margin-top: 23px;
-} 
+    cursor: pointer;
+}
 /* End Header Area  */
 
 /* Start Sign Up Area  */
@@ -94,7 +96,7 @@ body {
     float: left;
 }
 .left-area p {
-    width: 90%;
+    width: 72%;
     font-size: 20px;
     font-weight: 700;
     color: #0e385f;
@@ -294,9 +296,4 @@ body {
     .footer-area .bottom {
         margin-top: 23px;
     }
-
-
-
-
-
-/* ENd Footer Area */
+/* End Footer Area */
