@@ -26,18 +26,18 @@
     position: relative;
 }
 .navigation {
-    background: rgb(255, 182, 47);
+    background: rgb(255, 123, 47);
     width: 250px;
     height: 500px;
     float: left;
     position: relative;
 }
 .main {
-    background: skyblue;
+    background: rgb(51, 197, 255);
     overflow: hidden;
 }
 .content {
-    background: skyblue;
+    background: rgb(51, 197, 255);
     float: left;
     width: 700px;
     height: 500px;
@@ -51,7 +51,7 @@
     position: relative;
 }
 .footer {
-    background: rgb(212, 0, 212);
+    background: rgb(222, 44, 253);
     float: left;
     width: 1200px;
     height: 120px;
