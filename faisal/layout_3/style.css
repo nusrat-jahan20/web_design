@@ -1,0 +1,73 @@
+.clear {
+    clear: both;
+}
+h1,
+h3 {
+    margin: 0;
+}
+.container {
+    width: 900px;
+    color: white;
+}
+.header h1,
+.footer h1,
+.image h1,
+.service-one h3,
+.service-two h3,
+.service-three h3,
+.service-four h3,
+.service-five h3,
+.service-six h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header {
+    background: rgb(255, 122, 45);
+    height: 100px;
+    position: relative;
+}
+.image {
+    background: black;
+    width: 100%;
+    height: 230px;
+    float: left;
+    position: relative;
+}
+.main {
+    padding: 20px;
+    background: blue;
+    height: 450px;
+}
+.main h1 {
+    text-align: center;
+    margin: 20px 0 20px 0 ;
+}
+.service-one,
+.service-two,
+.service-three,
+.service-four,
+.service-five,
+.service-six {
+    color: black;
+    background: white;
+    width: 125px;
+    height: 145px;
+    margin: 20px;
+    float: left;
+    position: relative;
+}
+.service-one,
+.service-two,
+.service-four,
+.service-five {
+    margin-right: 200px;
+}
+.footer {
+    background: green;
+    width: 100%;
+    height: 100px;
+    float: left;
+    position: relative;
+}

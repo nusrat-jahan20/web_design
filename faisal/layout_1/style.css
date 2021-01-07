@@ -1,0 +1,59 @@
+.clear {
+    clear: both;
+}
+.container {
+    width: 1200px;
+    color: whitesmoke;
+}
+.header h1,
+.footer h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navigation h1,
+.content h1,
+.sidebar h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header {
+    background: blue;
+    height: 120px;
+    position: relative;
+}
+.navigation {
+    background: rgb(255, 182, 47);
+    width: 250px;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+.main {
+    background: skyblue;
+    overflow: hidden;
+}
+.content {
+    background: skyblue;
+    float: left;
+    width: 700px;
+    height: 500px;
+    position: relative;
+}
+.sidebar {
+    background: green;
+    float: left;
+    width: 250px;
+    height: 300px;
+    position: relative;
+}
+.footer {
+    background: rgb(212, 0, 212);
+    float: left;
+    width: 1200px;
+    height: 120px;
+    position: relative;
+}
