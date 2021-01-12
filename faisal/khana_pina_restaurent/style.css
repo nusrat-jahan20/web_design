@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.clear {
+    clear: both;
+}
+.full-page {
+    width: 1100px;
+    margin: auto;
+}
+.container {
+    width: 85%;
+    margin: auto;
+}
+button {
+    width: 90px;
+    display: inline;
+    background: rgb(255, 225, 56);
+    border: none;
+    padding: 8px;
+    margin-top: 71px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover {
+    background: rgb(250, 168, 14);
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+h1,h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* start header section */
+
+.header {
+    height: 70px;
+    background: #025b5e;
+    overflow: hidden;
+}
+.title {
+    width: 45%;
+    font-family: 'Kalam', cursive;
+    color: rgb(155, 255, 61);
+    float: left;
+}
+.navibar {
+    width: 55%;
+    float: left;
+    /* background: black; */
+}
+.title h1 {
+    font-size: 37px;
+    margin-top: 19px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background: black; */
+}
+ul li {
+    list-style: none;
+}
+ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    float: left;
+    padding: 28px 26.6px;
+}
+
+ul li a:hover {
+    background: #286c6e;
+}
+
+/* end header section */
+
+/* start recommand section */
+
+.recomand-section {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(173, 173, 182);
+    overflow: hidden;
+} 
+p {
+    margin: 0;
+}
+.recomand-part {
+    width: 30%;
+    text-align: justify;
+    margin-top: 20px;
+    float: left;
+}
+.recomand-part h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.recomand-img {
+    width: 45%;
+    margin: 20px 0;
+    margin-left: 233px;
+    float: left;
+}
+.masala-img {
+    width: 420px;
+    height: 250px;
+}
+
+/* end recommand section */
+
+/* start main-section */
+
+.main-section {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    float: left;
+    width: 100%;
+}
+.main-section h1 {
+    color: rgb(8, 102, 243);
+    margin: 10px 0;
+}
+.food {
+    width: 281.6px;
+    height: 200px;
+    border-radius: 10px;
+}
+.contant {
+    width: 281.6px;
+    text-align: justify;
+}
+.noodles,
+.burger,
+.pizza {
+    float: left;
+    margin-top: 10px;
+    margin-right: 45px;
+}
+.pizza {
+    margin-right: 0;
+}
+.main-section .contant button {
+    margin-top: 0;
+    margin: 20px 0 25px 0;
+}
+
+/* end main-section */
+
+/* start footer-section */
+
+.footer-section {
+    background: #025b5e;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 0 50px 0;
+    overflow: hidden;
+}
+.oct {
+    margin: 18px 0;
+}
+.footer-section .oct p {
+    display: inline;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.communication a img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 5px 0;
+    transition: 1s;
+}
+.communication a img:hover {
+    transform: rotate(360deg);
+}
+
+.footer-section .contant {
+    float: left;
+    margin-right: 45px;
+}
+.footer-section #last {
+    margin-right: 0;
+}
+.head {
+    margin-bottom: 25px;
+}
+.about {
+    font-size: 13.5px;
+}
+
+/* end footer-section */
+
+/* start copyright */
+    .copyright {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 13px;
+        margin: 20px 0;
+    }
+/* end copyright */
+
+
+
+
+
+
+
+
+
+
+
+
+
