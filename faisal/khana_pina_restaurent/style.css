@@ -196,7 +196,9 @@ p {
 .about {
     font-size: 13.5px;
 }
-
+.communication p {
+    display: inline;
+}
 /* end footer-section */
 
 /* start copyright */
@@ -208,16 +210,3 @@ p {
         margin: 20px 0;
     }
 /* end copyright */
-
-
-
-
-
-
-
-
-
-
-
-
-
