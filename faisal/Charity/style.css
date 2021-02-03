@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background: rgb(250, 247, 247);
 }
 p {
     margin: 0;
@@ -63,47 +64,78 @@ p {
 
 .nav-bar {
     width: 100%;
-    height: 80px;
+    height: 91px;
     overflow: hidden;
-    
 }
 .logo img {
     width: 200px;
     cursor: pointer;
     float: left;
-    margin-top: 12px;
+    margin-top: 16px;
 }
 .nav {
-    width: 562px;
-    height: 85px;
+    width: 580px;
     float: left;
-    margin-left: 747px;
+    margin-left: 732px;
 }
 .nav ul {
-    /* width: 93px;
-    height: 80px; */
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav ul li {
     list-style: none;
 }
 .nav ul li a {
-    width: 93px;
-    height: 80px;
-    color: rgb(138, 138, 138);
-    font-size: 14px;
-    float: left;
+    position: relative;
+    display: block;
+    padding: 11px 25px;
+    margin: 25px 0;
     text-decoration: none;
     text-transform: capitalize;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: #262626;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.5s;
 }
 .nav ul li a:hover {
-    color: black;
+    color: white;
+}
+.nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.nav ul li a:hover::before {
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform: scaleY(0);
+    transition: 0.5s;
+    z-index: -1;
+}
+.nav ul li a:hover::after {
+    transform: scaleY(1);
 }
 
 
@@ -111,11 +143,86 @@ p {
     position: relative;
     width: 100%;
     height: 600px;
+    overflow: hidden;
 }
-.background-image img {
-    display: block;
+.background-image ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.background-image ul li {
+    list-style: none;
+}
+.background-image ul li .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+.background-image ul li .slide img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.background-image ul li input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+}
+.background-image .navigation {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.background-image .bar {
+    width: 25px;
+    height: 15px;
+    border: 4px solid rgb(255, 255, 255);
+    margin: 4px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: scale(1);
+}
+.background-image .bar:hover {
+    background: white;
+    transform: scale(1.2);
+}
+.background-image ul li input[type="radio"]:checked ~ .slide {
+    transition: transform 0.5s;
+    transform: rotateY(0deg);
+    transform-origin: right;
+}
+.background-image ul li input[type="radio"]:checked ~ .slide img {
+    animation: animate 40s linear infinite;
+}
+@keyframes animate {
+    0% 
+    {
+        transform: scale(1);
+    }
+    50% 
+    {
+        transform: scale(1.2);
+    }
+    100% 
+    {
+        transform: scale(1);
+    }
 }
 .image-overlay {
     position: absolute;
@@ -133,7 +240,7 @@ p {
     justify-content: center;
 }
 .image-overlay:hover {
-        box-shadow: 3px 0 8px rgb(255, 255, 255),0 3px 8px rgb(255, 255, 255);
+        box-shadow: 5px 0 8px rgb(255, 255, 255),0 5px 8px rgb(255, 255, 255), 5px 0 8px rgb(255, 255, 255), 0 5px 8px rgb(255, 255, 255);
 }
 .image-overlay .anna-frank p {
     margin: 0;
@@ -156,7 +263,7 @@ p {
     transition: 0.8s;
 }
 .image-overlay .button:hover {
-    transform: scale(1.05);
+    letter-spacing: 1.2px;
     background: rgb(225, 225, 225, 0.3);
 }
 
@@ -260,10 +367,11 @@ p {
     transition: 0.6s;
 }
 .three-images .donate p:hover {
-    font-size: 14.5px;
-    background: linear-gradient(rgb(161, 245, 105), green);
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: linear-gradient(rgb(245, 186, 59), rgb(248, 119, 44));
     color: white;
-    border: 1px solid  rgb(64, 141, 12);
+    border: 1px solid  rgb(156, 2, 2);
     cursor: pointer;
 }
 
@@ -337,10 +445,11 @@ p {
     transition: 0.6s;
 } 
 .donetion-text button:hover {
-    font-size: 14.5px;
-    background: linear-gradient(rgb(161, 245, 105), green);
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: linear-gradient(rgb(245, 186, 59), rgb(248, 119, 44));
     color: white;
-    border: 1px solid  rgb(64, 141, 12);
+    border: 1px solid  rgb(156, 2, 2);
     cursor: pointer;
 }
 
@@ -359,12 +468,28 @@ p {
     list-style: none;
 }
 .partner .logo ul li a{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 5px 0 10px rgb(196, 196, 197), 0 5px 10px rgb(196, 196, 197);
     text-decoration: none;
-    font-size: 55px;
+    font-size: 50px;
+    color: rgb(175, 175, 175);
     float: left;
-    padding: 10px 95px ;
+    margin: 20px 91px;
+    position: relative;
+    transition: 0.7s;
 }
-
+.partner .logo ul li a:hover {
+    color: rgb(141, 141, 141);
+    transform: translate(0, -20px);
+}
+.partner .logo ul li a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 hr {
