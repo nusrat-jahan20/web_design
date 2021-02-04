@@ -5,7 +5,9 @@ body {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+
 /* Start Header Area */
+
 .header {
     background: #3E5C9A;
     padding: 25px;
@@ -79,9 +81,12 @@ body {
     margin-top: 23px;
     cursor: pointer;
 }
+
 /* End Header Area  */
 
+
 /* Start Sign Up Area  */
+
 .signup-area {
     background: linear-gradient(white, #D4D9E9);
     padding:30px 0;
@@ -230,70 +235,73 @@ body {
 .band a:hover {
     text-decoration: underline;
 }
+
 /* End Sign Up Area  */
 
+
 /* Start Footer Area */
-    .footer-area {
-        background: white;
-        padding: 30px 0;
-    }
-    .footer-area ul {
-        margin: 0;
-        padding: 0;
-    }
-    .footer-area ul li {
-        display: inline;
-    }
-    .footer-area .top ul li {
-        margin-right: 10px;
-    }
-    .footer-area .middle ul li {
-        margin-right: 18px;
-    }
-    .footer-area .top ul li:last-child a i{
-        font-size: 13px;
-        font-weight: 700;
-        background-color: #f5f6f7;
-        color: #365899;
-        border: 1px solid #ccd0d5;
-        border-radius: 2px;
-        padding: 2px 6px;
-        vertical-align: middle;
-    }
-    .footer-area .top ul li:last-child a i:hover {
-        background-color: #ececec;
-    }
-    .footer-area .top ul li:last-child,
-    .footer-area .middle ul li:last-child {
-        margin-right: 0;
-    }
-    .footer-area ul li a {
-        text-decoration: none;
-        font-size: 13px;
-        color: #365899;
-    }
-    .footer-area ul li.active a {
-        color: #737373;
-    }
-    .footer-area ul li a:hover {
-        text-decoration: underline;
-    }
-    .footer-area span {
-        color: #737373;
-        font-size: 13px;
-    }
-    .footer-area hr {
-        border: 0;
-        border-bottom: 1px solid #d4d4d4 ;
-        margin: 0;
-    }
-    .footer-area .top {
-        margin-bottom: 12px;
-    }
-    .footer-area .middle {
-        margin-top: 12px;
-    }
-    .footer-area .bottom {
-        margin-top: 23px;
-    }
+
+.footer-area {
+    background: white;
+    padding: 30px 0;
+}
+.footer-area ul {
+    margin: 0;
+    padding: 0;
+}
+.footer-area ul li {
+    display: inline;
+}
+.footer-area .top ul li {
+    margin-right: 10px;
+}
+.footer-area .middle ul li {
+    margin-right: 18px;
+}
+.footer-area .top ul li:last-child a i{
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #f5f6f7;
+    color: #365899;
+    border: 1px solid #ccd0d5;
+    border-radius: 2px;
+    padding: 2px 6px;
+    vertical-align: middle;
+}
+.footer-area .top ul li:last-child a i:hover {
+    background-color: #ececec;
+}
+.footer-area .top ul li:last-child,
+.footer-area .middle ul li:last-child {
+    margin-right: 0;
+}
+.footer-area ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #365899;
+}
+.footer-area ul li.active a {
+    color: #737373;
+}
+.footer-area ul li a:hover {
+    text-decoration: underline;
+}
+.footer-area span {
+    color: #737373;
+    font-size: 13px;
+}
+.footer-area hr {
+    border: 0;
+    border-bottom: 1px solid #d4d4d4 ;
+    margin: 0;
+}
+.footer-area .top {
+    margin-bottom: 12px;
+}
+.footer-area .middle {
+    margin-top: 12px;
+}
+.footer-area .bottom {
+    margin-top: 23px;
+}
 /* End Footer Area */
