@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: rgb(250, 247, 247);
+    background: rgb(243, 240, 240);
     box-sizing: border-box;
     width: 1848px;
     margin: auto;
@@ -45,10 +45,10 @@ p {
     margin-right: 0;
 }
 .left {
-    width: 244px;
+    width: 250px;
     height: 100%;
     float: left;
-    margin-right: 1043px;
+    margin-right: 1037px;
 }
 .left .button {
     display: inline-block;
@@ -74,8 +74,10 @@ p {
     border-radius: 25px;
     box-sizing: border-box;
     line-height: 35px;
-    text-align: center;
-    
+    text-align: center;   
+}
+.left .button:hover {
+    box-shadow: 8px 8px 10px rgba(25, 131, 32, 0.8);
 }
 .left .button:nth-child(1):hover .icon {
     background: #4267B2;
@@ -322,17 +324,23 @@ p {
     width: 1848px;
 }
 .box {
-    border: 2px solid rgb(228, 226, 226);
-    border-radius: 5px;
+    border: 2px solid none;
+    border-radius: 10px;
     margin: 100px 0;
     margin-right: 170px;
     padding: 65px 65px;
     float: left;
-    box-shadow: 1px 1px 5px rgb(221, 220, 220), 1px 1px 5px rgb(221, 220, 220);
+    background: rgb(245, 240, 240);
+    box-shadow: -5px -5px 7px #ffffff, 5px 5px 5px rgb(94, 104, 121, .288);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+}
+.box:hover {
+    box-shadow: inset -5px -5px 7px #ffffff, inset 5px 5px 5px rgb(94, 104, 121, .288);
+    transform: translateY(3px);
 }
 .box3 {
     margin-right: 0;
@@ -393,9 +401,16 @@ p {
     margin-right: 0;
 }
 .img img {
-    width: 430px;
-    height: 280px;
+    width: 485px;
+    height: 300px;
     margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2), -10px -10px 7px rgb(255, 255, 255);
+    transition: 0.6s;
+}
+.img img:hover {
+    transform: translateY(1px);
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2), -20px -20px 12px rgb(255, 255, 255);
 }
 .three-images .title p{
     font-size: 22px;
@@ -527,13 +542,13 @@ p {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -7px -7px 10px -1px rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     text-decoration: none;
     font-size: 50px;
     color: rgb(175, 175, 175);
     float: left;
-    margin: 30px 101px;
+    margin: 30px 99px;
     margin-bottom: 40px;
     position: relative;
     transition: 0.7s;
@@ -541,7 +556,7 @@ p {
 .partner .logo ul li a:hover {
     color: rgb(141, 141, 141);
     box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), 
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.822), 
                 -0.5px -0.5px 0px rgba(255, 255, 255, 1), 
                 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 
                 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
