@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c0c0c;
+}
+a {
+    width: 200px;
+    display: block;
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+}
+a span {
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 8px;
+}
+ a .liquid {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 200px;
+     height: 200px;
+     background: #4973ff;
+ }
