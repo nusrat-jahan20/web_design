@@ -70,6 +70,10 @@ body::after {
     transform: translateY(0px);
     opacity: 1;
 }
+.container .card:hover .contant {
+    transform: translateY(0px);
+    opacity: 1;
+}
 .container .card .contant h2 {
     position: absolute;
     top: -90px;
