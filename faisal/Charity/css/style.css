@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +18,7 @@ p {
     clear: both;
 }
 .header {
-    width: 1848px;
+    width: 100%;
     height: 80px;
     background: rgb(15, 197, 15);
     color: white;
@@ -117,7 +120,11 @@ p {
 .nav-bar {
     width: 1848px;
     height: 91px;
+    background: rgb(243, 240, 240);
+    position: sticky;
+    top: 0;
     overflow: hidden;
+    z-index: 1;
 }
 .logo img {
     width: 200px;
@@ -326,7 +333,7 @@ p {
 .box {
     border: 2px solid none;
     border-radius: 10px;
-    margin: 100px 0;
+    margin: 100px 0 0;
     margin-right: 170px;
     padding: 65px 65px;
     float: left;
@@ -368,7 +375,8 @@ p {
 }
 .charity-causes {
     width: 1848px;
-    margin: 20px 0 90px 0;
+    margin: 20px 0 0;
+    padding-top: 100px;
 }
 .charity-causes p {
     display: flex;
@@ -394,8 +402,9 @@ p {
 .part {
     width: 485px;
     margin-right: 104px;
-    float: left;
     margin-bottom: 90px;
+    padding-top: 100px;
+    float: left;
     position: relative;
 }
 .part3 {
@@ -406,12 +415,12 @@ p {
     height: 300px;
     margin-bottom: 50px;
     border-radius: 5px;
-    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2), -10px -10px 7px rgb(255, 255, 255);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3), -10px -10px 7px rgb(255, 255, 255);
     transition: 0.6s;
 }
 .img img:hover {
-    transform: translateY(1px);
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2), -20px -20px 12px rgb(255, 255, 255);
+    transform: translateY(2px);
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4), -20px -20px 12px rgb(255, 255, 255);
 }
 .three-images .title p{
     font-size: 22px;
@@ -491,8 +500,7 @@ p {
 .image {
     position: relative;
     width: 1663.19px;
-    height: 450px;
-    margin-bottom: 110px;
+    height: 550px;
 }
 .education-image {
     display: block;
@@ -505,7 +513,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
     flex-direction: column;
@@ -523,6 +531,10 @@ p {
 }
 
 
+
+.donetion {
+    padding-top: 120px;
+}
 .donetion-image img {
     width: 781.69px;
     height: 450px;
@@ -571,7 +583,7 @@ p {
     font-size: 50px;
     color: rgb(175, 175, 175);
     float: left;
-    margin: 30px 99px;
+    margin: 30px 101.6px;
     margin-bottom: 40px;
     position: relative;
     transition: 0.7s;
@@ -674,3 +686,7 @@ hr {
     text-align: center;
     padding: 27px 0;
 }
+
+
+
+
