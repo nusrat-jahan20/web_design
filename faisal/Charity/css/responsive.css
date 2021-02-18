@@ -1,0 +1,93 @@
+@media screen and (max-width:980px) {
+    .container {
+        min-width: 800px;
+    }
+    .background-image {
+        width: 100%;
+    }
+    /* .header {
+        height: 125px;
+    }
+    .right {
+        float: none;
+        width: 375px;
+        margin-left: 210px;
+    }
+    .right p {
+        margin-top: 0;
+    }
+    .left {
+        width: 315px;
+        margin: auto;
+        float: none;
+    }
+    .left .button {
+        margin: 20px 15px;
+    } */
+    .three-box {
+        padding-top: 5px;
+    }
+    .box {
+        width: 470px;
+        margin: 100px 145px 0;
+        margin-right: 0;
+        float: none;
+    }
+    .part {
+        width: 485px;
+        padding-top: 0;
+        margin: 90px 199px 50px;
+    }
+    .image {
+        margin-top: 100px;
+    }
+    .donetion-image img {
+        width: 883px;
+        margin-right: 0;
+        float: none;
+    }
+    .donetion-text {
+        width: 883px;
+        text-align: justify;
+        float: none;
+    }
+    .donetion .donetion-text a,
+    .three-images .donate a {
+        margin-top: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .partner .logo ul li a {
+        margin: 30px 110px 50px;
+    }
+    .footer {
+        padding-top: 90px;
+    }
+    .footer .about, .footer .page, .footer .link, .footer .contact_us {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .footer ul li, .footer ul li a {
+        float: left;
+    }
+    .footer ul li:nth-child(1), .footer ul li a:nth-child(1) {
+        float: none;
+    }
+    .footer .page, .footer .link, .footer .contact_us {
+        padding: 30px 0;
+    }
+    .footer .page ul li {
+        margin: 0 50px;
+    }
+    .footer .link ul li a {
+        margin: 0 44px;
+    }
+    .footer .contact_us ul li {
+        margin: 0 12px;
+    }
+    .footer .contact_us ul li:nth-child(1) {
+        margin-bottom: 10px;
+    }
+}
