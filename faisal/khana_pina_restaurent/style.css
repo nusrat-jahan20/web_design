@@ -182,6 +182,17 @@ p {
 .communication a img:hover {
     transform: rotate(360deg);
 }
+.communication .icon{
+    position: absolute;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 16px;
+}
+.communication .icon:hover {
+    color: rgb(255, 118, 38);
+}
 
 .footer-section .contant {
     float: left;
@@ -196,9 +207,7 @@ p {
 .about {
     font-size: 13.5px;
 }
-.communication p {
-    display: inline;
-}
+
 /* end footer-section */
 
 /* start copyright */
