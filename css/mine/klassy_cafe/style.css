@@ -1,0 +1,36 @@
+.fullpage {
+    font-family: roboto, sans-serif;
+}
+.container {
+    max-width: 1125px;
+    margin: auto;
+}
+.clear {
+    clear: both;
+}
+.header-area {
+    height: 80px;
+}
+.logo-part {
+    margin-top: 16px;
+    float: left;
+}
+.navbar-part {
+    float: right;
+}
+.navbar-part ul {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    list-style: none;
+}
+.navbar-part ul li a{
+    text-decoration: none;
+    color: black;
+    float: left;
+    font-size: 15px;
+    padding: 20px;
+}
+.navbar-part .sub-navbar {
+    display: none;
+}

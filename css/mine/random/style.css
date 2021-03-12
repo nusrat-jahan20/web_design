@@ -1,0 +1,13 @@
+p {
+    font-size: 20px;
+    font-weight: 600;
+}
+p:nth-child(odd) {
+    color: red;
+    text-align: center;
+}
+p:nth-child(even) {
+    color: rgb(56, 192, 63);
+    text-align: center;
+    margin-top: 50px;
+}
