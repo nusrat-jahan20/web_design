@@ -50,6 +50,12 @@
     opacity: .5;
     transition: opacity .15s ease;
 }
+.carousel-control-next{
+    right: 20px;
+}
+.carousel-control-prev {
+    left: 20px;
+}
 
 .carousel-control-next:hover, .carousel-control-prev:hover {
     background: black;
