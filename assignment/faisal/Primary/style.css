@@ -56,19 +56,47 @@
 .carousel-control-prev {
     left: 20px;
 }
-
 .carousel-control-next:hover, .carousel-control-prev:hover {
     background: black;
     opacity: .5;
-
 }
-/* .navbar-nav a {
+.navbar-nav li {
+    float: left;
+    /* display: inline-block; */
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.navbar-nav a {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* padding: 0 40px; */
+    display: inline-block;
+} 
+.navbar-nav a:hover{
+    /* background: rgb(21, 43, 241); */
+    color: rgb(0, 0, 0);
 }
-.navbar-light .navbar-brand {
+.dropdown-content{
+    display: none;
+    box-shadow:0 10px 20px 0 rgb(168, 169, 243);
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a{
+    display: block ;
+    background: white;
+    color: black;
+}
+.dropdown-content a:hover{
+    background: rgb(243, 242, 242);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+./* navbar-light .navbar-brand {
     color: white;
     font-size: 25px;
     text-transform: uppercase;
