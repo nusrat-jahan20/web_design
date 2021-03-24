@@ -26,6 +26,10 @@
     border-top: 1px solid rgb(240, 60, 60);
     transition: all 0.25s linear;
 }
+.navbar-expand-lg .navbar-nav .icon {
+    border-top: none;
+    font-weight: 600;
+}
 .navbar-expand-lg .navbar-nav .icon:hover {
     cursor: pointer;
     color: rgb(240, 60, 60);
