@@ -74,7 +74,7 @@
 
 /* carousel-item start */
 .carousel-item {
-    height: 520px;
+    height: 540px;
     min-height: 300px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -86,30 +86,40 @@
     height: 100%;
 }
 .carousel-caption {
-    bottom: 150px;
+    bottom: 100px;
 }
 .carousel-caption h5 {
     font-size: 45px;
-    letter-spacing: 2px;
-    margin-top: 25px;
     font-family: 'Roboto Slab', serif;
+}
+.carousel-caption h2 {
+    display: inline-flex;
+    /* padding: 0 10px; */
+    font-size: 65px;
+    font-family: 'Roboto Slab', serif;
+}
+.carousel-caption div {
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
 }
 .carousel-caption p {
     margin: auto;
-    font-size: 28px;
-    line-height: 1.9;
+    font-size: 25px;
     font-family: 'Poppins', sans-serif;
 }
 .carousel-caption a {
-    background: #ffffff35;
+    background: #ffffff31;
     border: 1px solid white;
     opacity: 0.8;
-    font-size: 16px;
-    padding: 6px 10px;
+    font-size: 14px;
+    padding: 8px;
     display: inline-block;
     color: white;
-    margin-top: 30px;
     text-decoration: none;
+    margin-top: 70px;
 }
 .carousel-caption a:hover {
     background: #eeeeee75;
@@ -117,6 +127,8 @@
 .carousel-caption hr {
     width: 270px;
     border-top: 1px solid whitesmoke;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 .carousel-control-next, .carousel-control-prev {
     position: absolute;
