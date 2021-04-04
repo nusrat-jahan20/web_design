@@ -1,4 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100%;
+    width: 70%;
+}
 /* navbar-nav start */
+
 .navbar-nav li {
     float: left;
     list-style-type: none;
@@ -74,7 +83,6 @@
 
 /* carousel-item start */
 .carousel-item {
-    width: 100%;
     height: 540px;
     min-height: 300px;
     background: no-repeat center center scroll;
@@ -84,7 +92,6 @@
 
 }
 .carousel-item img {
-    width: 100%;
     height: 100%;
 }
 .carousel-caption {
@@ -159,4 +166,98 @@
 }
 /* carousel-item end */
 
-/* part1 start */
+/* start part_1 */
+.part_1 {
+    height: 350px;
+    padding: 100px 0;
+    background: white;
+}
+.part_1 .layers, .part_1 .love, .part_1 .tools, .part_1 .glove {
+    max-width: 235px;
+    width: 100%;
+    margin-right: 5%;
+    float: left;
+    text-align: center;
+}
+.part_1 .glove {
+    margin-right: 0;
+}
+.part_1 i {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background: white;
+    font-size: 42px;
+    color: #F44336;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+.part_1 i:hover {
+    color: rgb(255, 255, 255);
+    background: #F44336;
+}
+.service-name p {
+    padding-top: 10px;
+    color: #444;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto Slab', serif;
+}
+.service-text p {
+    padding-top: 18px;
+    font-size: 12px;
+    color: #444;
+    font-weight: 300;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* end part_1 */
+
+/* start part_1 */
+.part_2 {
+    background: #f7f7f7;
+    padding-top: 80px;
+    padding-bottom: 300px;
+}
+.part_2 .promo-text {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    color: #444;
+    font-family: 'Roboto Slab', serif;
+}
+.part_2 .promo-paragraph {
+    color: #444;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.part_2 hr {
+    width: 70px;
+    border-top: 1px solid rgb(255, 0, 0); 
+}
+.part_2 .line-one {
+    margin-bottom: 25px;
+}
+.part_2 .line-one, .part_2 .line-two {
+    display: inline-flex;
+}
+.part_2 .image-part {
+    width: 40%;
+    height: 380px;
+    margin-right: 3%;
+    background: white;
+}
+.part_2 .image-part:nth-child(3), .part_2 .image-part:nth-child(6) {
+    margin-right: 0;
+}
+.part_2 .image-part img {
+    width: 100%;
+    height: 230px;
+}
+.part_2 .image-part .p, .part_2 .image-part h3 {
+    text-align: center;
+}
+/* end part_1 */
