@@ -7,7 +7,6 @@ const loadCards = () => {
 // display all cards
 const displayCards = (cards) => {
     const cardsContainer = document.getElementById('cards-container');
-    console.log(cards.data.tools);
 
     // display 6 cards
      cards.data.tools = cards.data.tools.slice(0, 6);
@@ -21,26 +20,26 @@ const displayCards = (cards) => {
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
                     <ol class="px-3 text-secondary"> `;
-        for (const feature of card.features) {
-            innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
-        }
-        innerHTML += `
+                    for (const feature of card.features) {
+                        innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
+                    }
+                    innerHTML += `
 
-                    </ol>
-                </div>
-                <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
-                    <div>
-                        <h5>${card.name ? card.name : 'NO data found'}</h5>
-                        <i class="fa">&#xf133;</i><p class="d-inline ps-2">${card.published_in ? card.published_in : 'NO data found'}</p>
-                    </div>
-                    <div>
-                    <button onclick="loadCardDetails('${card.id}')" type="button" class="border-0 rounded-circle px-2" data-bs-toggle="modal" data-bs-target="#singleCards">
-                        <i class="fa text-danger">&#xf061;</i>
-                    </button>
-                    </div>
-                </div>
-            </div>
-        `
+                                </ol>
+                            </div>
+                            <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5>${card.name ? card.name : 'NO data found'}</h5>
+                                    <i class="fa">&#xf133;</i><p class="d-inline ps-2">${card.published_in ? card.published_in : 'NO data found'}</p>
+                                </div>
+                                <div>
+                                <button onclick="loadCardDetails('${card.id}')" type="button" class="border-0 rounded-circle px-2" data-bs-toggle="modal" data-bs-target="#singleCards">
+                                    <i class="fa text-danger">&#xf061;</i>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    `
         cardsDiv.innerHTML = innerHTML;
         cardsContainer.appendChild(cardsDiv);
     });
@@ -57,7 +56,6 @@ const loadCardDetails = (id) => {
 }
 
 const showCardDetails = card => {
-    console.log(card.features)
     const cardModal = document.getElementById('card-modal');
     cardModal.innerHTML = ' ';
     let innerHTML = `
@@ -85,7 +83,7 @@ const showCardDetails = card => {
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h4>Features</h4>
-                                <ul>
+                                <ul> 
                                     <li>Customizable responses</li>
                                     <li>Multilingual support</li>
                                     <li>Seamless integration</li>
@@ -93,12 +91,11 @@ const showCardDetails = card => {
                             </div>
                             <div>
                                 <h4>Integrations</h4>
-                                <ul>
-                                    <li>${card.integrations ? card.integrations[0] : 'No data Found'}</li>
-                                    <li>${card.integrations?card.integrations[1]:'No data Found'}</li>
-                                    <li>${card.integrations?card.integrations[2]:'No data Found'}</li>
-                                    <li>${card.integrations ? card.integrations[3] : 'No data Found'}</li>
-                                    <li>${card.integrations ? card.integrations[4] : 'No data Found'}</li>
+                                <ul>`;
+                                for (const integration of card.integrations) {
+                                    innerHTML += `<li>${integration ? integration : 'No data found'}</li>`;
+                                }
+                                innerHTML += `
                                 </ul>
                             </div>
                         </div>
@@ -174,10 +171,10 @@ const displayCards2 = (cards) => {
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
                     <ol class="px-3 text-secondary"> `;
-        for (const feature of card.features) {
-            innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
-        }
-        innerHTML += `
+                    for (const feature of card.features) {
+                        innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
+                    }
+                    innerHTML += `
                     </ol>
                 </div>
                 <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
@@ -198,45 +195,4 @@ const displayCards2 = (cards) => {
     });
     toggleSpinner(false);
 }
-
-
-// accuracy hidden
-// function accuracyNone(data) {
-//     if(data === null)
-//     {
-//         const accuracy = document.getElementsByClassName('accuracy');
-//         accuracy.classList.add('d-none');
-//     }
-// }
-
-
-// dinamically add list item
-function dinamicList(cards, value) {
-    cards.forEach(card => {
-        if(value !== null){
-        const dinamicList = document.getElementById('dinamic-list');
-        const li = document.createElement('li');
-        li.innerText = 'new list'
-        dinamicList.appendChild(li)
-        }
-        else {
-            dinamicList.innerText = 'No data Found'
-        }
-    })
-}
-
-
-
-
-
-
-// ------------------------------------------
-
-// document.getElementById('button').addEventListener('click', function() {
-//     const div = document.getElementById('unique');
-//     const li = document.createElement('li');
-//     li.innerText = 'new list'
-//     div.appendChild(li)
-// })
-
 
