@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Universe Hub</title>
+
+    <!-- custom css -->
+    <style>
+        #btn-close {
+            position: absolute;
+            top: -17px;
+            right: -17px;
+        }
+        #bg-color {
+            background-color: #fff4ea;
+        }
+    </style>
+
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/2c0666c682.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- start header section -->
+    <header class="text-center my-4">
+        <h1 class="fw-bolder">AI Universe Hub</h1>
+        <button class="btn btn-danger my-3 px-3">Sort By Date</button>
+    </header>
+    <!-- end header section -->
+
+    <!-- start main section -->
+    <main class="mb-5 d-flex flex-column justify-content-center align-items-center">
+        <!-- start cards container -->
+        <section class="container">
+            <div id="cards-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+            </div>
+        </section>
+        <!-- end cards container -->
+
+        <!-- start modal for single card -->
+        <section>
+            <div class="modal fade" id="singleCards" tabindex="-1" aria-labelledby="singleCardsLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl ">
+                    <div id="card-modal" class="modal-content">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end modal for single card -->
+
+        <!-- loader --> 
+        <section id="loader" class="d-none">
+            <div style="height: 100px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- see more button -->
+        <button onclick="moreCards()" id="seeMoreBtn" class="btn btn-danger mt-5 px-4">See More</button>
+    </main>
+    <!-- end main section -->
+
+    <!-- custom js file -->
+    <script src="js/features.js"></script>
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
