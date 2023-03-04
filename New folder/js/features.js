@@ -20,9 +20,14 @@ const displayCards = (cards) => {
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
                     <ol class="px-3 text-secondary"> `;
-                    for (const feature of card.features) {
-                        innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
-                    }
+        if (card.features) {
+            for (const feature of card.features) {
+                innerHTML += `<li>${feature}</li>`;
+            }
+        } else {
+            innerHTML += `<li>No Data Found</li>`;
+        }
+                    
                     innerHTML += `
 
                                 </ol>
@@ -83,18 +88,31 @@ const showCardDetails = card => {
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h4>Features</h4>
-                                <ul> 
-                                    <li>Customizable responses</li>
-                                    <li>Multilingual support</li>
-                                    <li>Seamless integration</li>
-                                </ul>
+                                <ul> `
+    if (card.features) {
+        for (const key in card.features) {
+            if (Object.hasOwnProperty.call(card.features, key)) {
+                const feature_name = card.features[key].feature_name;
+                innerHTML += `<li>${feature_name}</li>`;
+            }
+        }
+    }else {
+        innerHTML += '<li>No Data Found</li>';
+    }
+    
+                innerHTML += `</ul>
                             </div>
                             <div>
                                 <h4>Integrations</h4>
                                 <ul>`;
-                                for (const integration of card.integrations) {
-                                    innerHTML += `<li>${integration ? integration : 'No data found'}</li>`;
-                                }
+    if (card.integrations) {
+        for (const integration of card.integrations) {
+            innerHTML += `<li>${integration}</li>`;
+        }
+    } else {
+        innerHTML += '<li>No Data Found</li>';
+    }
+                                
                                 innerHTML += `
                                 </ul>
                             </div>
@@ -163,7 +181,6 @@ const displayCards2 = (cards) => {
 
     // loop for each cards
     cards.data.tools.forEach(card => {
-        console.log(card.features);
         const cardsDiv = document.createElement('div');
         cardsDiv.classList.add('col');
         let innerHTML = `<div class="card h-100 p-4 rounded-3">
@@ -171,8 +188,12 @@ const displayCards2 = (cards) => {
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
                     <ol class="px-3 text-secondary"> `;
-                    for (const feature of card.features) {
-                        innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
+                    if (card.features) {
+                        for (const feature of card.features) {
+                            innerHTML += `<li>${feature}</li>`;
+                        }
+                    } else {
+                        innerHTML += `<li>No Data Found</li>`;
                     }
                     innerHTML += `
                     </ol>
@@ -196,3 +217,20 @@ const displayCards2 = (cards) => {
     toggleSpinner(false);
 }
 
+//create a function to sort the cards by published date
+function sortByDate() {
+    const cardsContainer = document.getElementById('cards-container');
+    const cards = document.getElementsByClassName('col');
+    const cardsArray = Array.from(cards);
+    cardsArray.sort((a, b) => {
+        const dateA = a.querySelector('p').innerText;
+        console.log(dateA);
+        const dateB = b.querySelector('p').innerText;
+        console.log(dateB);
+        return new Date(dateB) - new Date(dateA);
+    });
+    cardsContainer.innerHTML = '';
+    cardsArray.forEach(card => {
+        cardsContainer.appendChild(card);
+    })
+}
