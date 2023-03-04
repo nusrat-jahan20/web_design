@@ -16,16 +16,15 @@ const displayCards = (cards) => {
         // console.log(card.id);
         const cardsDiv = document.createElement('div');
         cardsDiv.classList.add('col');
-        cardsDiv.innerHTML = `
-            <div class="card h-100 p-4 rounded-3">
+        let innerHTML = `<div class="card h-100 p-4 rounded-3">
                 <img src="${card.image}" style="height: 250px;" class="card-img-top img-fluid rounded-3" alt="...">
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
-                    <ol class="px-3 text-secondary">
-                        <li>${card.features[0]}</li>
-                        <li>${card.features[1]}</li>
-                        <li>${card.features[2]}</li>
-                        <li>${card.features[3] ? card.features[3] : 'No data found'}</li>
+                    <ol class="px-3 text-secondary"> `;
+        for (const feature of card.features) {
+            innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
+        }
+        innerHTML += `
                     </ol>
                 </div>
                 <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
@@ -41,6 +40,7 @@ const displayCards = (cards) => {
                 </div>
             </div>
         `
+        cardsDiv.innerHTML = innerHTML;
         cardsContainer.appendChild(cardsDiv);
     });
 
@@ -59,7 +59,7 @@ const showCardDetails = card => {
     console.log(card.accuracy.score)
     const cardModal = document.getElementById('card-modal');
     cardModal.innerHTML = ' ';
-    cardModal.innerHTML = `
+    let innerHTML = `
         <div>
             <button id="btn-close" type="button" class="btn-close bg-danger rounded-circle p-2" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -106,10 +106,14 @@ const showCardDetails = card => {
             </div>
             <div class="col">
                 <div class="card p-4 rounded-4" style="height: auto;">
-                    <div style="position: relative;">
-                        ${accuracyNone(card.accuracy.score)}
-                        <h6 class="px-4 py-2 bg-danger text-white d-inline-block rounded-3 accuracy">${card.accuracy.score * 100}% accuracy</h6>
-                    </div>
+                    <div style="position: relative;">`
+    if (card.accuracy.score) {
+        innerHTML += `
+                        <h6 class="px-4 py-2 bg-danger text-white d-inline-block rounded-3 accuracy">${card.accuracy.score * 100}% accuracy </h6 >`;
+    }else {
+        innerHTML += ``;
+    }
+    innerHTML += `</div>
                     <img src="${card.image_link[0]}" class="card-img-top img-fluid rounded-4" alt="..." style="height: 250px;">
                     <div class="card-body text-center">
                         <h3 class="card-title p-3">${card.input_output_examples ? card.input_output_examples[0].input: 'Can you give any example?'}</h3>
@@ -119,6 +123,7 @@ const showCardDetails = card => {
             </div>
         </div>
     `
+    cardModal.innerHTML = innerHTML;
 }
 
 // add spinner to see more button
@@ -163,16 +168,15 @@ const displayCards2 = (cards) => {
         // console.log(card.id);
         const cardsDiv = document.createElement('div');
         cardsDiv.classList.add('col');
-        cardsDiv.innerHTML = `
-            <div class="card h-100 p-4 rounded-3">
+        let innerHTML = `<div class="card h-100 p-4 rounded-3">
                 <img src="${card.image}" style="height: 250px;" class="card-img-top img-fluid rounded-3" alt="...">
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
-                    <ol class="px-3 text-secondary">
-                        <li>${card.features[0]}</li>
-                        <li>${card.features[1]}</li>
-                        <li>${card.features[2]}</li>
-                        <li>${card.features[3] ? card.features[3] : 'No data found'}</li>
+                    <ol class="px-3 text-secondary"> `;
+        for (const feature of card.features) {
+            innerHTML += `<li>${feature ? feature : 'No data found'}</li>`;
+        }
+        innerHTML += `
                     </ol>
                 </div>
                 <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
@@ -188,6 +192,7 @@ const displayCards2 = (cards) => {
                 </div>
             </div>
         `
+        cardsDiv.innerHTML = innerHTML;
         cardsContainer.appendChild(cardsDiv);
     });
     toggleSpinner(false);
