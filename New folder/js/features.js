@@ -56,7 +56,7 @@ const loadCardDetails = (id) => {
 }
 
 const showCardDetails = card => {
-    console.log(card.integrations[0])
+    console.log(card.image_link[0])
     const cardModal = document.getElementById('card-modal');
     cardModal.innerHTML = ' ';
     cardModal.innerHTML = `
@@ -70,7 +70,7 @@ const showCardDetails = card => {
                         <h4 class="card-title mb-4">${card.description}</h4>
                         <div class="d-flex justify-content-around mb-4">
                             <div class="bg-white w-25 rounded-4 py-3 text-success d-flex flex-column justify-content-center align-items-center">
-                                <h6><span>${card.pricing[0].price}</span> <br> <span>${card.pricing[0].plan}</span></h6>
+                                <h6><span>${card.pricing ? card.pricing[0].price : 'No data found'}</span> <br> <span>${card.pricing ? card.pricing[0].plan : 'No data found'}</span></h6>
                             </div>
 
                             <div class="bg-white w-25 text-center rounded-4 text py-3 text-warning">
@@ -108,8 +108,8 @@ const showCardDetails = card => {
                 <div class="card p-4 rounded-4" style="height: auto;">
                     <img src="${card.image_link[0]}" class="card-img-top img-fluid rounded-4" alt="..." style="height: 250px;">
                     <div class="card-body text-center">
-                        <h3 class="card-title p-3">${card.input_output_examples[0].input}</h3>
-                        <p class="card-text">${card.input_output_examples[0].output}</p>
+                        <h3 class="card-title p-3">${card.input_input ? card.input_input_examples[0].input: 'No data found'}</h3>
+                        <p class="card-text">${card.input_output ? card.input_output_examples[0].output: 'No data found'}</p>
                     </div>
                 </div>
             </div>
@@ -117,11 +117,13 @@ const showCardDetails = card => {
     `
 }
 
+// add spinner to see more button
 document.getElementById('seeMoreBtn').addEventListener('click', function() {
     // start loading 
     toggleSpinner(true);
 })
 
+// spinner function
 const toggleSpinner = isLoading => {
     const loaderSection = document.getElementById('loader');
     if(isLoading) {
