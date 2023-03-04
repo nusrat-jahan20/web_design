@@ -25,13 +25,13 @@ const displayCards = (cards) => {
                         <li>${card.features[0]}</li>
                         <li>${card.features[1]}</li>
                         <li>${card.features[2]}</li>
-                        
+                        <li>${card.features[3] ? card.features[3] : 'No data found'}</li>
                     </ol>
                 </div>
                 <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
                     <div>
-                        <h5>${card.name}</h5>
-                        <i class="fa">&#xf133;</i><p class="d-inline ps-2">${card.published_in}</p>
+                        <h5>${card.name ? card.name : 'NO data found'}</h5>
+                        <i class="fa">&#xf133;</i><p class="d-inline ps-2">${card.published_in ? card.published_in : 'NO data found'}</p>
                     </div>
                     <div>
                     <button onclick="loadCardDetails('${card.id}')" type="button" class="border-0 rounded-circle px-2" data-bs-toggle="modal" data-bs-target="#singleCards">
@@ -56,7 +56,7 @@ const loadCardDetails = (id) => {
 }
 
 const showCardDetails = card => {
-    console.log(card)
+    console.log(card.accuracy.score)
     const cardModal = document.getElementById('card-modal');
     cardModal.innerHTML = ' ';
     cardModal.innerHTML = `
@@ -106,10 +106,14 @@ const showCardDetails = card => {
             </div>
             <div class="col">
                 <div class="card p-4 rounded-4" style="height: auto;">
+                    <div style="position: relative;">
+                        ${accuracyNone(card.accuracy.score)}
+                        <h6 class="px-4 py-2 bg-danger text-white d-inline-block rounded-3 accuracy">${card.accuracy.score * 100}% accuracy</h6>
+                    </div>
                     <img src="${card.image_link[0]}" class="card-img-top img-fluid rounded-4" alt="..." style="height: 250px;">
                     <div class="card-body text-center">
-                        <h3 class="card-title p-3">${card.input_output_examples ? card.input_output_examples[0].input: 'No data found'}</h3>
-                        <p class="card-text">${card.input_output_examples ? card.input_output_examples[0].output: 'No data found'}</p>
+                        <h3 class="card-title p-3">${card.input_output_examples ? card.input_output_examples[0].input: 'Can you give any example?'}</h3>
+                        <p class="card-text">${card.input_output_examples ? card.input_output_examples[0].output: 'No! Not Yet! Take a break!!!'}</p>
                     </div>
                 </div>
             </div>
@@ -168,13 +172,13 @@ const displayCards2 = (cards) => {
                         <li>${card.features[0]}</li>
                         <li>${card.features[1]}</li>
                         <li>${card.features[2]}</li>
-                        <li>${card.features[3]}</li>
+                        <li>${card.features[3] ? card.features[3] : 'No data found'}</li>
                     </ol>
                 </div>
                 <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
                     <div>
-                        <h5>${card.name}</h5>
-                        <i class="fa">&#xf133;</i><p class="d-inline ps-2">${card.published_in}</p>
+                        <h5>${card.name ? card.name : 'NO data found'}</h5>
+                        <i class="fa">&#xf133;</i><p class="d-inline ps-2">${card.published_in ? card.published_in : 'NO data found'}</p>
                     </div>
                     <div>
                     <button onclick="loadCardDetails('${card.id}')" type="button" class="border-0 rounded-circle px-2" data-bs-toggle="modal" data-bs-target="#singleCards">
@@ -184,7 +188,18 @@ const displayCards2 = (cards) => {
                 </div>
             </div>
         `
-        cardsContainer.appendChild(cardsDiv)
+        cardsContainer.appendChild(cardsDiv);
     });
     toggleSpinner(false);
+}
+
+
+// accuracy hidden
+function accuracyNone(data) {
+    if(data === null)
+    {
+        console.log('inside loop')
+        const accuracy = document.getElementsByClassName('accuracy');
+        accuracy.classList.add('d-none');
+    }
 }
