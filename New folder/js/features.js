@@ -25,7 +25,7 @@ const displayCards = (cards) => {
                         <li>${card.features[0]}</li>
                         <li>${card.features[1]}</li>
                         <li>${card.features[2]}</li>
-                        <li>${card.features[3]}</li>
+                        
                     </ol>
                 </div>
                 <div class="pt-3 card-footer d-flex justify-content-between align-items-center">
@@ -56,7 +56,7 @@ const loadCardDetails = (id) => {
 }
 
 const showCardDetails = card => {
-    console.log(card.image_link[0])
+    console.log(card)
     const cardModal = document.getElementById('card-modal');
     cardModal.innerHTML = ' ';
     cardModal.innerHTML = `
@@ -108,8 +108,8 @@ const showCardDetails = card => {
                 <div class="card p-4 rounded-4" style="height: auto;">
                     <img src="${card.image_link[0]}" class="card-img-top img-fluid rounded-4" alt="..." style="height: 250px;">
                     <div class="card-body text-center">
-                        <h3 class="card-title p-3">${card.input_input ? card.input_input_examples[0].input: 'No data found'}</h3>
-                        <p class="card-text">${card.input_output ? card.input_output_examples[0].output: 'No data found'}</p>
+                        <h3 class="card-title p-3">${card.input_output_examples ? card.input_output_examples[0].input: 'No data found'}</h3>
+                        <p class="card-text">${card.input_output_examples ? card.input_output_examples[0].output: 'No data found'}</p>
                     </div>
                 </div>
             </div>
