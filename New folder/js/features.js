@@ -217,3 +217,20 @@ const displayCards2 = (cards) => {
     toggleSpinner(false);
 }
 
+//create a function to sort the cards by published date
+function sortByDate() {
+    const cardsContainer = document.getElementById('cards-container');
+    const cards = document.getElementsByClassName('col');
+    const cardsArray = Array.from(cards);
+    cardsArray.sort((a, b) => {
+        const dateA = a.querySelector('p').innerText;
+        console.log(dateA);
+        const dateB = b.querySelector('p').innerText;
+        console.log(dateB);
+        return new Date(dateB) - new Date(dateA);
+    });
+    cardsContainer.innerHTML = '';
+    cardsArray.forEach(card => {
+        cardsContainer.appendChild(card);
+    })
+}
