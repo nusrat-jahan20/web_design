@@ -7,13 +7,13 @@ const loadCards = () => {
 // display all cards
 const displayCards = (cards) => {
     const cardsContainer = document.getElementById('cards-container');
+    console.log(cards.data.tools);
 
     // display 6 cards
      cards.data.tools = cards.data.tools.slice(0, 6);
 
     // loop for each cards
     cards.data.tools.forEach(card => {
-        // console.log(card.id);
         const cardsDiv = document.createElement('div');
         cardsDiv.classList.add('col');
         cardsDiv.innerHTML = `
@@ -21,7 +21,7 @@ const displayCards = (cards) => {
                 <img src="${card.image}" style="height: 250px;" class="card-img-top img-fluid rounded-3" alt="...">
                 <div class="card-body mt-3">
                     <h5 class="card-title">Features</h5>
-                    <ol class="px-3 text-secondary">
+                    <ol id="dinamic-list" class="px-3 text-secondary">
                         <li>${card.features[0]}</li>
                         <li>${card.features[1]}</li>
                         <li>${card.features[2]}</li>
@@ -56,7 +56,7 @@ const loadCardDetails = (id) => {
 }
 
 const showCardDetails = card => {
-    console.log(card.accuracy.score)
+    console.log(card.features)
     const cardModal = document.getElementById('card-modal');
     cardModal.innerHTML = ' ';
     cardModal.innerHTML = `
@@ -70,15 +70,15 @@ const showCardDetails = card => {
                         <h4 class="card-title mb-4">${card.description}</h4>
                         <div class="d-flex justify-content-around mb-4">
                             <div class="bg-white w-25 rounded-4 py-3 text-success d-flex flex-column justify-content-center align-items-center">
-                                <h6><span>${card.pricing ? card.pricing[0].price : 'No data found'}</span> <br> <span>${card.pricing ? card.pricing[0].plan : 'No data found'}</span></h6>
+                                <h6><span>${card.pricing ? card.pricing[0].price : 'Free '}</span> <br> <span>${card.pricing ? card.pricing[0].plan : 'of cost'}</span></h6>
                             </div>
 
                             <div class="bg-white w-25 text-center rounded-4 text py-3 text-warning">
-                                <h6><span>$10/</span> <br> <span>month</span> <br> <span>Basic</span></h6>
+                                <h6><span>${card.pricing ? card.pricing[0].price : 'Free'}</span> <br> <span>${card.pricing ? card.pricing[1].plan : ' of cost'}</span></h6>
                             </div>
 
                             <div class="bg-white w-25 text-center rounded-4 text py-3 text-danger">
-                                <h6><span>Contact</span> <br> <span>us</span> <br> <span>Enterprise</s6an></h5>
+                                <h6><span>${card.pricing ? card.pricing[0].price : 'Free'}</span> <br> <span>${card.pricing ? card.pricing[2].plan : ' of cost'}</span></h6>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between">
@@ -107,7 +107,6 @@ const showCardDetails = card => {
             <div class="col">
                 <div class="card p-4 rounded-4" style="height: auto;">
                     <div style="position: relative;">
-                        ${accuracyNone(card.accuracy.score)}
                         <h6 class="px-4 py-2 bg-danger text-white d-inline-block rounded-3 accuracy">${card.accuracy.score * 100}% accuracy</h6>
                     </div>
                     <img src="${card.image_link[0]}" class="card-img-top img-fluid rounded-4" alt="..." style="height: 250px;">
@@ -160,7 +159,7 @@ const displayCards2 = (cards) => {
 
     // loop for each cards
     cards.data.tools.forEach(card => {
-        // console.log(card.id);
+        console.log(card.features);
         const cardsDiv = document.createElement('div');
         cardsDiv.classList.add('col');
         cardsDiv.innerHTML = `
@@ -195,11 +194,42 @@ const displayCards2 = (cards) => {
 
 
 // accuracy hidden
-function accuracyNone(data) {
-    if(data === null)
-    {
-        console.log('inside loop')
-        const accuracy = document.getElementsByClassName('accuracy');
-        accuracy.classList.add('d-none');
-    }
+// function accuracyNone(data) {
+//     if(data === null)
+//     {
+//         const accuracy = document.getElementsByClassName('accuracy');
+//         accuracy.classList.add('d-none');
+//     }
+// }
+
+
+// dinamically add list item
+function dinamicList(cards, value) {
+    cards.forEach(card => {
+        if(value !== null){
+        const dinamicList = document.getElementById('dinamic-list');
+        const li = document.createElement('li');
+        li.innerText = 'new list'
+        dinamicList.appendChild(li)
+        }
+        else {
+            dinamicList.innerText = 'No data Found'
+        }
+    })
 }
+
+
+
+
+
+
+// ------------------------------------------
+
+// document.getElementById('button').addEventListener('click', function() {
+//     const div = document.getElementById('unique');
+//     const li = document.createElement('li');
+//     li.innerText = 'new list'
+//     div.appendChild(li)
+// })
+
+
